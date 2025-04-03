@@ -1,0 +1,26 @@
+
+.head-list {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
+}
+
+.border-menu {
+  padding: 0px 20px 0px 20px;
+  border-radius: 15px;
+  border: 1px solid rgb(191, 191, 191);
+  display: flex;
+  flex-direction: column;
+}
+.border-menu > div {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(203, 203, 203);
+}
+
+.type-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+  

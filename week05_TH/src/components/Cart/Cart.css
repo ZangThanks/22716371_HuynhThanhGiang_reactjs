@@ -1,0 +1,18 @@
+
+
+.cart-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
+
+.cart-container > div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
+}

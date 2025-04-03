@@ -1,0 +1,12 @@
+
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.detail-container > img {
+    height: 300px;
+}

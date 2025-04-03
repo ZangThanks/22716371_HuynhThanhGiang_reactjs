@@ -1,0 +1,27 @@
+
+/*Header*/
+input {
+    padding-left: 10px;
+    background-color: white;
+    height: 25px;
+    border-radius: 15px;
+}
+  
+.list-display {
+    color: black;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 7px;
+    background-color: rgb(255, 218, 224);
+    color: rgb(226, 106, 126);
+}
+  

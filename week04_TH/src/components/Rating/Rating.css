@@ -1,0 +1,11 @@
+
+.rating-container {
+    list-style-type: none;
+}
+
+.rating-container > li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}

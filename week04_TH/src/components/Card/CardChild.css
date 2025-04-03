@@ -1,0 +1,29 @@
+.card-container {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.card-container > li {
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.card-container > li:nth-child(1){
+    background-color: rgb(253, 206, 245);
+    color: rgb(194, 80, 190);
+}
+.card-container > li:nth-child(2){
+    background-color: rgb(245, 207, 255);
+    color: rgb(216, 69, 253);
+}
+.card-container > li:nth-child(3){
+    background-color: rgb(253, 242, 206);
+    color: rgb(180, 190, 37);
+}
+.card-container > li:nth-child(4){
+    background-color: rgb(205, 230, 248);
+    color: rgb(56, 150, 218);
+}

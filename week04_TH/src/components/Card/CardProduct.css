@@ -1,0 +1,47 @@
+.container-card {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    height: 200px;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 15px;
+    box-shadow: 5px 10px 20px rgb(131, 131, 131);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+    padding: -10px 0px -10px 0px;
+}
+
+.container-card > img {
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container-card:hover {
+    transform: scale(1.05);
+}
+
+.time-card {
+    background-color: rgb(255, 230, 234);
+    color: rgb(250, 172, 185);
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 0px 8px 0px 8px;
+}
+
+.content-card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    padding: 0px 10px 0px 10px;
+    box-sizing: border-box;
+}
+
+.name-icon {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}

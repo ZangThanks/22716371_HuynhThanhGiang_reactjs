@@ -1,0 +1,33 @@
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.fashion {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.little {
+    font-size: larger;
+    font-weight: bolder;
+    color: orange;
+    margin-right: 5px;
+}
+
+.list-choice {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style-type: none;
+    gap: 50px;
+}
+
+.list-choice > li > a {
+    color: black;
+}
