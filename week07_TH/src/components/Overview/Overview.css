@@ -9,6 +9,11 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 20px 0px 20px 0px;
+}
+
+.title span {
+    font-size: 18px;
 }
 
 .card-loading {

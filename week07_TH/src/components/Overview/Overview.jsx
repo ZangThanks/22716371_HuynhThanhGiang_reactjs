@@ -25,7 +25,7 @@ export default function Overview() {
         <div className='overview-container'>
             <div className='title'>
                 <img src={overview}></img>
-                <p>Overview</p>
+                <span>Overview</span>
             </div>
             <div className='card-loading'>
                 {items.map((item, index) => {
