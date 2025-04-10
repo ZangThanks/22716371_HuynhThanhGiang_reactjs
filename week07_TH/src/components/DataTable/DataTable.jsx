@@ -3,8 +3,23 @@ import edit from '../../assets/images/edit.png';
 import report from '../../assets/images/report.png';
 import imported from '../../assets/images/import.png';
 import exported from '../../assets/images/export.png';
+import { useState } from 'react';
+import Modal from '../Modal/Modal';
 
 function DataTable({items}) {
+    const [selected, setSelected] = useState(null);
+    const [showModal, setShowModal] = useState(false);
+
+    const handleEditClick = (item) => {
+        setSelected(item);
+        setShowModal(true);
+    }
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+        setSelected(null);
+    }
+
     return (
         <div className='table-container'>
             <div className='table-title'>
@@ -49,7 +64,7 @@ function DataTable({items}) {
                                 </span>
                             </td>
                             <td>
-                                <button className='white-bg'>
+                                <button className='white-bg' onClick={() => handleEditClick(item)} >
                                     <img src={edit} ></img>
                                 </button>
                             </td>
@@ -57,6 +72,10 @@ function DataTable({items}) {
                     ))}
                 </tbody>
             </table>
+
+            {showModal && selected && (
+                <Modal selected={selected} handleCloseModal={handleCloseModal}></Modal>
+            )}         
         </div>
     );
 }
