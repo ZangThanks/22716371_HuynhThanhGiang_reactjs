@@ -23,17 +23,19 @@ function App() {
   }
 
   return (
-    <ItemProvider>
-      <div className='container'>
-        <Header cartCount={cart.length}></Header>
-        <Routes>
-          <Route path='/' element={<Content addToCart={addToCart}></Content>}></Route>
-          <Route path='/cart' element={<Cart items={cart}></Cart>}></Route>
-          <Route path='/:id' element={<CardDetail></CardDetail>}></Route>
+    <>
+      <ItemProvider>
+        <div className='container'>
+          <Header cartCount={cart.length}></Header>
+          <Routes>
+            <Route path='/' element={<Content addToCart={addToCart}></Content>}></Route>
+            <Route path='/cart' element={<Cart items={cart}></Cart>}></Route>
+            <Route path='/:id' element={<CardDetail></CardDetail>}></Route>
           </Routes>
-          <Footer></Footer>
-      </div>
-    </ItemProvider>
+        </div>
+      </ItemProvider>
+      <Footer></Footer>
+    </>
   )
 }
 

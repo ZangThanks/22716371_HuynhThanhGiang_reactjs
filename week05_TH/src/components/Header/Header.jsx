@@ -1,9 +1,10 @@
+import { useState } from 'react';
 import './Header.css';
 import { useNavigate } from "react-router-dom";
 
 export default function Header({cartCount}) {
     const navigate = useNavigate();
-
+    
     const choices = [<p onClick={() => navigate('/')}>Home</p>, 'Story', 'FAQs', 'Contact', <i onClick={() => navigate("/cart")} className="fa-solid fa-cart-shopping">({cartCount})</i>]
 
     return (
