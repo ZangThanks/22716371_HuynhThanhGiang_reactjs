@@ -6,6 +6,7 @@ import integration from "../../assets/images/integration.png";
 import messages from "../../assets/images/messages.png";
 import analytics from "../../assets/images/analytics.png";
 import dashboard from "../../assets/images/dashboard.png";
+import updated from "../../assets/images/updated.png";
 import MenuCard from "../MenuCard/MenuCard";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -58,6 +59,9 @@ export default function Menu() {
             ></MenuCard>
           );
         })}
+      </div>
+      <div className="update-announce">
+        <img src={updated}></img>
       </div>
     </div>
   );

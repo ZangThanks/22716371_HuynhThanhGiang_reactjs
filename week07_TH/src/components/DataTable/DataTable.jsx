@@ -33,13 +33,15 @@ function DataTable({ items, fetchData }) {
           <img src={report}></img>
           <span>Detailed report</span>
         </div>
+
+        {/* DataTable */}
         <div className="button-group">
-          <button className="button-bg" onClick={handleCreateClick}>
+          <div className="button-bg" onClick={handleCreateClick}>
             <img src={imported}></img>
-          </button>
-          <button className="button-bg">
+          </div>
+          <div className="button-bg">
             <img src={exported}></img>
-          </button>
+          </div>
         </div>
       </div>
       <table className="data-table">
@@ -83,6 +85,21 @@ function DataTable({ items, fetchData }) {
           ))}
         </tbody>
       </table>
+
+      <div className="table-below">
+        <div className="table-results">{items.length} results</div>
+        <div className="table-page">
+          {["<", "1", "2", "3", "4", "...", "10", "11", ">"].map(
+            (num, index) => {
+              return (
+                <div key={index} className="page-number">
+                  {num}
+                </div>
+              );
+            }
+          )}
+        </div>
+      </div>
 
       {showModal && (
         <Modal
