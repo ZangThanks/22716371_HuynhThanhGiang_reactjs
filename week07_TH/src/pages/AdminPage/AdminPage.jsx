@@ -4,6 +4,11 @@ import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Menu from "../../components/Menu/Menu";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
+import ProjectsNav from "../../components/ProjectsNav/ProjectsNav";
+import TeamsNav from "../../components/TeamsNav/TeamsNav";
+import AnalyticsNav from "../../components/AnalyticsNav/AnalyticsNav";
+import MessagesNav from "../../components/MessagesNav/MessagesNav";
+import IntegrationsNav from "../../components/IntegrationsNav/IntegrationsNav";
 
 function AdminPage() {
   return (
@@ -17,6 +22,11 @@ function AdminPage() {
       <div className="content">
         <Routes>
           <Route path="/Dashboard" element={<Content />}></Route>
+          <Route path="/Projects" element={<ProjectsNav />}></Route>
+          <Route path="/Teams" element={<TeamsNav />}></Route>
+          <Route path="/Analytics" element={<AnalyticsNav />}></Route>
+          <Route path="/Messages" element={<MessagesNav />}></Route>
+          <Route path="/Integrations" element={<IntegrationsNav />}></Route>
         </Routes>
       </div>
       <div className="footer">

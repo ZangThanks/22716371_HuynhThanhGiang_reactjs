@@ -24,8 +24,8 @@ function Content() {
     <div className="content-container">
       <div>
         <Overview></Overview>
-        {loading && <p>Loading table....</p>}
         <DataTable items={items} fetchData={fetchData}></DataTable>
+        {loading && <p style={{ paddingLeft: "10px" }}>Loading table....</p>}
       </div>
     </div>
   );
