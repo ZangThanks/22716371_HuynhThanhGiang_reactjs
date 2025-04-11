@@ -1,35 +1,33 @@
 import { useState } from "react";
 import "./Modal.css";
 
-function Modal({ selected, handleCloseModal, fetchData }) {
+function Modal({ selected, handleCloseModal, fetchData, isCreating }) {
   const [formData, setFormData] = useState({ ...selected });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    console.log(e.target);
-    console.log(name);
-    console.log(value);
-
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSave = async () => {
     try {
-      const response = await fetch(
-        `https://67deba96471aaaa742856ccc.mockapi.io/data/v1/Customers/${formData.id}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const url = isCreating
+        ? "https://67deba96471aaaa742856ccc.mockapi.io/data/v1/Customers"
+        : "`https://67deba96471aaaa742856ccc.mockapi.io/data/v1/Customers/${formData.id}`";
+
+      const methods = isCreating ? "POST" : "PUT";
+
+      const response = await fetch(url, {
+        method: methods,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
       console.log(response);
 
       if (response.ok) {
-        alert("Cập nhật thành công!");
+        alert(isCreating ? "Thêm thành công" : "Cập nhật thành công!");
         handleCloseModal();
         fetchData();
       } else {
@@ -44,7 +42,9 @@ function Modal({ selected, handleCloseModal, fetchData }) {
   return (
     <div className="modal-overlay">
       <div className="modal">
-        <span className="modal-title">Chi tiết đơn hàng</span>
+        <span className="modal-title">
+          {isCreating ? "Thêm mới khách hàng" : "Chi tiết đơn hàng"}
+        </span>
         <div className="modal-content">
           <div className="text-view">
             <strong>Customer name: </strong>
@@ -67,7 +67,7 @@ function Modal({ selected, handleCloseModal, fetchData }) {
               type="text"
             />
             <input
-              company="orderValue"
+              name="orderValue"
               value={formData.orderValue}
               onChange={handleChange}
               type="text"

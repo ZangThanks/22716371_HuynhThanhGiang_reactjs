@@ -9,9 +9,15 @@ import Modal from "../Modal/Modal";
 function DataTable({ items, fetchData }) {
   const [selected, setSelected] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [isCreating, setIsCreating] = useState(false);
 
   const handleEditClick = (item) => {
     setSelected(item);
+    setShowModal(true);
+  };
+
+  const handleCreateClick = () => {
+    setIsCreating(true);
     setShowModal(true);
   };
 
@@ -28,7 +34,7 @@ function DataTable({ items, fetchData }) {
           <span>Detailed report</span>
         </div>
         <div className="button-group">
-          <button className="button-bg">
+          <button className="button-bg" onClick={handleCreateClick}>
             <img src={imported}></img>
           </button>
           <button className="button-bg">
@@ -78,11 +84,12 @@ function DataTable({ items, fetchData }) {
         </tbody>
       </table>
 
-      {showModal && selected && (
+      {showModal && (
         <Modal
           selected={selected}
           fetchData={fetchData}
           handleCloseModal={handleCloseModal}
+          isCreating={isCreating}
         ></Modal>
       )}
     </div>
