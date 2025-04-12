@@ -3,7 +3,7 @@ import Content from "../../components/Content/Content";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Menu from "../../components/Menu/Menu";
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
 import ProjectsNav from "../../components/ProjectsNav/ProjectsNav";
 import TeamsNav from "../../components/TeamsNav/TeamsNav";
 import AnalyticsNav from "../../components/AnalyticsNav/AnalyticsNav";
@@ -21,6 +21,7 @@ function AdminPage() {
       </div>
       <div className="content">
         <Routes>
+          <Route path="/" element={<Navigate to="/Dashboard" replace />} />
           <Route path="/Dashboard" element={<Content />}></Route>
           <Route path="/Projects" element={<ProjectsNav />}></Route>
           <Route path="/Teams" element={<TeamsNav />}></Route>
