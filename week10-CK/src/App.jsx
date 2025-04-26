@@ -2,6 +2,7 @@ import "./App.css";
 import Banner from "./components/Banner";
 import Header from "./components/Header";
 import NavHeader from "./components/NavHeader";
+import Structure from "./components/Structure";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       <div className="mx-[5vw] w-[90vw]">
         <NavHeader />
         <Banner />
+      </div>
+      <div className="mx-[5vw] w-[90vw] flex justify-between">
+        <Structure />
       </div>
     </div>
   );
