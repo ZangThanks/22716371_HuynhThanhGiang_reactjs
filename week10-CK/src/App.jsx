@@ -1,8 +1,10 @@
 import "./App.css";
 import Banner from "./components/Banner";
+import Footer from "./components/FooterIUH";
 import Header from "./components/Header";
 import NavHeader from "./components/NavHeader";
 import Structure from "./components/Structure";
+import FooterIUH from "./components/FooterIUH";
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
       </div>
       <div className="mx-[5vw] w-[90vw] flex justify-between">
         <Structure />
+      </div>
+      <div className="mx-[5vw] w-[90vw] flex justify-between">
+        <FooterIUH />
       </div>
     </div>
   );
